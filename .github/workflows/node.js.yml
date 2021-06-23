@@ -35,17 +35,6 @@ jobs:
     - name: nojekyll setup to solve _next static errors
       run: touch ./out/.nojekyll
     
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        branch: master # The branch the action should deploy to.
-        folder: out
-
-    - name: Checkout submodules
-      uses: textbook/git-checkout-submodule-action@master
-
-    - name: Run Lighthouse CI
-      uses: treosh/lighthouse-ci-action@v2
-      with:
-        configPath: "./lighthouserc.json"
-        temporaryPublicStorage: true
+    - run: npm install && npm install -g @lhci/cli@0.7.x
+    - run: npm run build
+    - run: lhci autorun
