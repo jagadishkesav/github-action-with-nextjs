@@ -31,10 +31,12 @@ jobs:
       
     - name: Testing if scripts present
       run: npm test --if-present
-      
-    - run: lhci autorun
-      env:
-        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-
+    
     - name: nojekyll setup to solve _next static errors
       run: touch ./out/.nojekyll
+    
+    - name: Run lhci autorun
+      run: lhci autorun
+        env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
