@@ -1,6 +1,6 @@
 {
     "ci": {
-      "url": ["https://jagadishkesav.github.io/github-action-with-nextjs/", "https://jagadishkesav.github.io/github-action-with-nextjs/posts/"],
+      "url": ["http://localhost/", "http://localhost/posts/"],
       "collect": {
         "startServerCommand": "https://jagadishkesav.github.io/github-action-with-nextjs/"
       }
