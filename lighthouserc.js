@@ -3,7 +3,7 @@ module.exports = {
       collect: {
         /* Add configuration here */
         staticDistDir: './out',
-        url: ['https://jagadishkesav.github.io/github-action-with-nextjs/test']
+        url: ['https://jagadishkesav.github.io/github-action-with-nextjs/index.html']
       },
       assert: {
         assertions: {
