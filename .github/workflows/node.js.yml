@@ -40,3 +40,11 @@ jobs:
       with:
         branch: master # The branch the action should deploy to.
         folder: out
+    - name: Run Lighthouse on urls and validate with lighthouserc
+      uses: treosh/lighthouse-ci-action@v2
+      with:
+        urls: |
+          https://nextjs-lighthouse-ci.golfthanakorn.now.sh/
+        runs: 1
+        configPath: '.github/lighthouse/custom-config/lighthouserc-desktop-config.json'
+        uploadArtifacts: true
