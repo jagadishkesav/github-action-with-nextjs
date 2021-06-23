@@ -25,7 +25,6 @@ jobs:
         
     - name: Installing the npm packages
       run: npm install
-      run: npm i -g http-server @lhci/cli
       
     - name: Building Next-js project if present
       run: npm run export --if-present
