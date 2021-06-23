@@ -2,7 +2,7 @@
     "ci": {
       "url": ["http://localhost/", "http://localhost/posts/"],
       "collect": {
-        "startServerCommand": "https://jagadishkesav.github.io/github-action-with-nextjs/"
+        "staticDistDir": "https://jagadishkesav.github.io/github-action-with-nextjs/"
       }
     }
   }
