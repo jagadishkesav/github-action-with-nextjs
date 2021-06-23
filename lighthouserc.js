@@ -2,10 +2,12 @@ module.exports = {
     ci: {
       collect: {
         /* Add configuration here */
-        startServerCommand: 'https://jagadishkesav.github.io/github-action-with-nextjs/',
+        startServerCommand: 'npm run start',
+        url: ['https://jagadishkesav.github.io/github-action-with-nextjs/']
       },
       assert: {
         preset: 'lighthouse:recommended',
+        budgetFile: './budget.json',
         assertions: {
           'dom-size': ['error', {maxNumericValue: 3000}],
   
@@ -34,7 +36,7 @@ module.exports = {
       },
       upload: {
         /* Add configuration here */
-        // target: 'temporary-public-storage',
+        target: 'temporary-public-storage',
         urlReplacementPatterns: [
           's/[0-9a-f]{12}$/HASH/',
           's#:[0-9]{3,5}/#:PORT/#',
