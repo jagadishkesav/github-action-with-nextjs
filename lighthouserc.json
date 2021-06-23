@@ -2,7 +2,7 @@
     "ci": {
       "collect": {
         "url": [
-          "http://127.0.0.1:4000"
+          " https://jagadishkesav.github.io/github-action-with-nextjs/test"
         ],
         "startServerCommand": "http-server ./build/client -p 4000 -g",
         "startServerReadyPattern": "Available on",
@@ -12,7 +12,10 @@
         "target": "temporary-public-storage"
       },
       "assert": {
-        "preset": "lighthouse:recommended"
+        "preset": "lighthouse:recommended",
+        "assertions": {
+            "first-contentful-paint": ["error", { "minScore": 0.6 }]
+          }
       }
     }
   }
