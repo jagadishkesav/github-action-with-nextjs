@@ -40,9 +40,9 @@ jobs:
       with:
         branch: master # The branch the action should deploy to.
         folder: out
-        
+
     - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@master
+      uses: textbook/git-checkout-submodule-action@master
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
