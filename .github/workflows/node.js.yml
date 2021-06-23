@@ -24,7 +24,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: Installing the npm packages
-      run: npm ci && npm i -g http-server @lhci/cli
+      run: npm install
+      run: npm i -g http-server @lhci/cli
       
     - name: Building Next-js project if present
       run: npm run export --if-present
