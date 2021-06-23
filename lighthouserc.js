@@ -5,10 +5,32 @@ module.exports = {
         startServerCommand: 'https://jagadishkesav.github.io/github-action-with-nextjs/',
       },
       assert: {
+        preset: 'lighthouse:recommended',
         assertions: {
-          'categories:performance': ['warn', {minScore: 1}],
-          'categories:accessibility': ['error', {minScore: 1}]
-        }
+          'dom-size': ['error', {maxNumericValue: 3000}],
+  
+          'csp-xss': 'off',
+          'unsized-images': 'off',
+          'uses-rel-preload': 'off',
+          'uses-responsive-images': 'off',
+          'uses-rel-preconnect': 'off',
+          'preload-lcp-image': 'off',
+          'offscreen-images': 'off',
+          'unused-javascript': 'off',
+  
+          label: 'off',
+          'content-width': 'off',
+          'color-contrast': 'off',
+          bypass: 'off',
+          'tap-targets': 'off',
+  
+          'apple-touch-icon': 'off',
+          'maskable-icon': 'off',
+          'installable-manifest': 'off',
+          'service-worker': 'off',
+          'splash-screen': 'off',
+          'themed-omnibox': 'off',
+        },
       },
       upload: {
         /* Add configuration here */
