@@ -1,6 +1,6 @@
 {
     "ci": {
-      "url": ["http://localhost/", "http://localhost/posts/"],
+      "url": ["https://jagadishkesav.github.io/github-action-with-nextjs/", "https://jagadishkesav.github.io/github-action-with-nextjs/posts/"],
       "collect": {
         "staticDistDir": "./out"
       }
