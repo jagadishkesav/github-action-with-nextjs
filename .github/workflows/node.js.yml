@@ -22,12 +22,19 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+        
     - name: Installing the npm packages
       run: npm install
+      
     - name: Building Next-js project if present
       run: npm run export --if-present
+      
     - name: Testing if scripts present
       run: npm test --if-present
+      
+    - name: nojekyll setup to solve _next static errors
+      run: touch ./out/.nojekyll
+    
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
