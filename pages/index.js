@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 const CustomContainer = styled.div`
   padding: 3rem;
-  background: pink;
-  color: white
+  color: black
 `;
 
 export default function Home(props) {
