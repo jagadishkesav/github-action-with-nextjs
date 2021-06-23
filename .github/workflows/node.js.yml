@@ -41,4 +41,4 @@ jobs:
         branch: master # The branch the action should deploy to.
         folder: out
     - name: LighthouseCI
-         run: lhci autorun
+      run: lhci autorun
