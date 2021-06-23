@@ -2,7 +2,7 @@ module.exports = {
     ci: {
       collect: {
         /* Add configuration here */
-        staticDistDir: './public',
+        staticDistDir: './out',
         url: ['http://localhost:8080']
       },
       assert: {
