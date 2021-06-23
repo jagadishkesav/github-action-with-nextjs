@@ -24,7 +24,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: Installing the npm packages
-      run: npm install
+    - run: npm install && npm install -g @lhci/cli@0.7.x
       
     - name: Building Next-js project if present
       run: npm run export --if-present
@@ -34,7 +34,5 @@ jobs:
       
     - name: nojekyll setup to solve _next static errors
       run: touch ./out/.nojekyll
-    
-    - run: npm install && npm install -g @lhci/cli@0.7.x
-    - run: npm run build
+
     - run: lhci autorun

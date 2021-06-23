@@ -2,7 +2,7 @@
     "ci": {
       "url": ["https://jagadishkesav.github.io/github-action-with-nextjs/", "https://jagadishkesav.github.io/github-action-with-nextjs/posts/"],
       "collect": {
-        "staticDistDir": "https://jagadishkesav.github.io/github-action-with-nextjs/"
+        "staticDistDir": "./out"
       }
     }
   }
