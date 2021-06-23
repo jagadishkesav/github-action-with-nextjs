@@ -34,5 +34,5 @@ jobs:
       
     - name: nojekyll setup to solve _next static errors
       run: touch ./out/.nojekyll
-
-    - run: lhci autorun
+      
+    - run: lhci autorun --upload.target=temporary-public-storage || echo "LHCI failed!"
