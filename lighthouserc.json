@@ -1,8 +1,11 @@
+
 {
     "ci": {
-      "url": ["https://jagadishkesav.github.io/github-action-with-nextjs/", "https://jagadishkesav.github.io/github-action-with-nextjs/posts/"],
-      "collect": {
-        "staticDistDir": "./out"
+      "assert": {
+        "assertions": {
+          "first-contentful-paint": ["error", { "minScore": 0.6 }]
+        }
       }
     }
   }
+  
