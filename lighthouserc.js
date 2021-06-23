@@ -2,8 +2,7 @@ module.exports = {
     ci: {
       collect: {
         /* Add configuration here */
-        staticDistDir: './out',
-        url: ['http://localhost:8000']
+        startServerCommand: 'https://jagadishkesav.github.io/github-action-with-nextjs/',
       },
       assert: {
         assertions: {

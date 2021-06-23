@@ -35,7 +35,6 @@ jobs:
     - run: lhci autorun
       env:
         LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-      chrome: stable
 
     - name: nojekyll setup to solve _next static errors
       run: touch ./out/.nojekyll
