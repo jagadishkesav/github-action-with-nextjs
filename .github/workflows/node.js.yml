@@ -24,7 +24,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: Installing the npm packages
-      run: npm install
+      run: npm ci && npm i -g http-server @lhci/cli
       
     - name: Building Next-js project if present
       run: npm run export --if-present
@@ -41,4 +41,4 @@ jobs:
         branch: master # The branch the action should deploy to.
         folder: out
     - name: LighthouseCI
-      run: npx lhci autorun
+      run: lhci autorun
