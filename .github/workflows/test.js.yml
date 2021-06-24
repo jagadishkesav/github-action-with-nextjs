@@ -3,6 +3,7 @@ name: testing multiple workflow with multiple yaml or yml files
 on:
   workflow_run:
     workflows: ["Node.js"]
+    branches: [github-action]
     types:
       - completed
 
