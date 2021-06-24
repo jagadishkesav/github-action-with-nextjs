@@ -1,4 +1,5 @@
 import CustomText from "../components/text";
+import Layout from "../components/layout";
 import styled from "styled-components";
 
 const CustomContainer = styled.div`
@@ -8,8 +9,10 @@ const CustomContainer = styled.div`
 
 export default function Home(props) {
   return (
-    <CustomContainer {...props}>
-      <CustomText/>
-    </CustomContainer>
+    <Layout>
+      <CustomContainer {...props}>
+        <CustomText/>
+      </CustomContainer>
+    </Layout>
   )
 }
