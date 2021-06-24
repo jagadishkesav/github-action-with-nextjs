@@ -9,7 +9,7 @@ const Header = () => {
                 name="viewport" 
                 content="width=device-width, initial-scale=1, shrink-to-fit=no"
             />
-            <meta name="description" content="" />
+            <meta name="description" content="this description im using in github action using nextjs for testig purpose i have use so that i wont get errors " />
             <title>Github Actions using Next Js</title>
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link 
