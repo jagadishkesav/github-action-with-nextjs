@@ -35,6 +35,12 @@ jobs:
     - name: nojekyll setup to solve _next static errors
       run: touch ./out/.nojekyll
     
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: master # The branch the action should deploy to.
+        folder: out
+        
     - name: Run lhci autorun
       run: lhci autorun
       env:
