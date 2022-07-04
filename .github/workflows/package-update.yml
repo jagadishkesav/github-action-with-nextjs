@@ -19,8 +19,8 @@ jobs:
       - name: package-update
         uses: taichi/actions-package-update@master
         env:
-          AUTHOR_EMAIL: tkcandrade@gmail.com
-          AUTHOR_NAME: Thamara Andrade
+          AUTHOR_EMAIL: s.jagadishkpd@gmail.com
+          AUTHOR_NAME: Jagadish Kesav
           EXECUTE: "true"
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
           LOG_LEVEL: debug
