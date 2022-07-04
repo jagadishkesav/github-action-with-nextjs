@@ -3,8 +3,6 @@ name: Update package dependencies
 on:
   schedule:
     - cron: "0 0 * * *"
-  workflow_run:
-    branches: [github-action]
 
 jobs:
   package-update:

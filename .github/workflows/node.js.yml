@@ -6,11 +6,6 @@ name: Node.js
 on:
   push:
     branches: [github-action]
-  workflow_run:
-    workflows: ["Update package dependencies"]
-    branches: [github-action]
-    types:
-      - completed
 
 jobs:
   build:
