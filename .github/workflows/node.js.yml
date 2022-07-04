@@ -6,6 +6,11 @@ name: Node.js
 on:
   push:
     branches: [github-action]
+  workflow_run:
+    workflows: ["Update package dependencies"]
+    branches: [github-action]
+    types:
+      - completed
 
 jobs:
   build:
@@ -17,26 +22,26 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-        
-    - name: Installing the npm packages
-      run: npm install
-      
-    - name: Building Next-js project if present
-      run: npm run export --if-present
-      
-    - name: Testing if scripts present
-      run: npm test --if-present
-    
-    - name: nojekyll setup to solve _next static errors
-      run: touch ./out/.nojekyll
-    
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        branch: master # The branch the action should deploy to.
-        folder: out
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Installing the npm packages
+        run: npm install
+
+      - name: Building Next-js project if present
+        run: npm run export --if-present
+
+      - name: Testing if scripts present
+        run: npm test --if-present
+
+      - name: nojekyll setup to solve _next static errors
+        run: touch ./out/.nojekyll
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: master # The branch the action should deploy to.
+          folder: out
