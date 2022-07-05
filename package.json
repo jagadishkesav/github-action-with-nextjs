@@ -15,7 +15,7 @@
     "ecstatic": "^4.1.4",
     "got": "^12.1.0",
     "http-server": "^0.12.3",
-    "lighthouse": "^8.0.0",
+    "lighthouse": "^9.6.3",
     "next": "^12.2.0",
     "node-fetch": "^3.2.6",
     "react": "17.0.2",
