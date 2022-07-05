@@ -1,0 +1,34 @@
+name: testing multiple workflow with multiple yaml or yml files
+
+on:
+  workflow_run:
+    workflows: ["Node.js"]
+    branches: [github-action]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    
+    - name: Installing the npm packages
+      run: npm install
+
+    - name: Installing the lhci package
+      run: npm install -g @lhci/cli@0.7.x
+        
+    - name: Run lhci autorun
+      run: lhci autorun
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
